@@ -1,0 +1,544 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #111;
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: black;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo img {
+    width: 150px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: gold;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: white;
+}
+
+/* Elegant Branding for "Wamuyu Styles" */
+.brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: gold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+
+
+/* Mobile Navigation - Toggle Button */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: gold;
+    cursor: pointer;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 15px;
+    right: 20px; /* Moves the button to the top right */
+}
+
+
+/* Navbar for Mobile */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul {
+        display: none; /* Hide menu initially */
+        flex-direction: column;
+        width: 100%;
+        background: black;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .navbar ul.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Hero Section with Background Image */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    background: url('../images/hero-home.jpg') no-repeat center center/cover; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Hero Content */
+.hero-content {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+    padding: 30px 40px;
+    border-radius: 10px;
+    color: white;
+    max-width: 500px;
+}
+
+/* Hero Heading */
+.hero-content h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: gold;
+}
+
+/* Hashtag Styling */
+.hero-content .hashtag {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f1c40f;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    background-color: gold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.05);
+}
+
+
+
+.featured h2 {
+    font-size: 36px;
+    color: gold;
+    margin-bottom: 20px;
+}
+
+.featured-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.featured-images img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.featured-images img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+    color: gold;
+    margin-top: auto;
+}
+
+/* End of styling for index.html */
+
+/* Start of styling for portfolio.html */
+/* Hero Section for Portfolio */
+.portfolio-hero {
+    background: url('../images/portfolio-hero.jpg') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.portfolio-hero .hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+}
+
+.portfolio-hero h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: gold;
+}
+
+.portfolio-hero p {
+    font-size: 18px;
+}
+
+/* Portfolio Gallery */
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-item img:hover {
+    transform: scale(1.05);
+}
+
+/* End of styling for portfolio.html */
+
+/* Start of styling for services.html */
+/* Hero Section for Services */
+.services-hero {
+    background: url('../images/services-hero.jpg') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.services-hero .hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+}
+
+.services-hero h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: gold;
+}
+
+.services-hero p {
+    font-size: 18px;
+}
+
+/* Services Section */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    text-align: center;
+}
+
+.service-card {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.service-card h2 {
+    color: gold;
+    margin: 15px 0;
+}
+
+/* Call to Action Section */
+.cta {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    margin-top: 20px;
+}
+
+.cta h2 {
+    color: gold;
+    font-size: 28px;
+}
+
+.cta p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.cta-button {
+    background: gold;
+    color: black;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 15px;
+    transition: background 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background: white;
+}
+
+/* End of styling for services.html */
+
+/* Start of styling for About.html */
+/* Hero Section for About */
+.about-hero {
+    background: url('../images/about-hero.jpg') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about-hero .hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+}
+
+.about-hero h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: gold;
+}
+
+.about-hero p {
+    font-size: 18px;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background: black;
+    color: white;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    gap: 30px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    color: gold;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Call to Action Button */
+.cta-button {
+    background: gold;
+    color: black;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 15px;
+    transition: background 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background: white;
+}
+
+/* End of styling for About.html */
+
+/* Start of styling for contact.html */
+/* Hero Section for Contact */
+.contact-hero {
+    background: url('../images/contact-hero.jpg') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-hero .hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+}
+
+.contact-hero h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: gold;
+}
+
+.contact-hero p {
+    font-size: 18px;
+}
+
+/* Contact Section */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background: black;
+    color: white;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    gap: 30px;
+    align-items: center;
+}
+
+.contact-form, .contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-form h2, .contact-info h2 {
+    color: gold;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid gold;
+    border-radius: 5px;
+    background: black;
+    color: white;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form .cta-button {
+    margin-top: 15px;
+    background: gold;
+    color: black;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.contact-form .cta-button:hover {
+    background: white;
+}
+
+.map iframe {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* End of styling for contact.html */
